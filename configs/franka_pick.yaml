@@ -1,0 +1,15 @@
+robot: franka
+task: pick_cube
+output_dir: data/demos/franka_pick_cube
+num_demos: 100
+success_threshold: 0.12
+fixed_base: true
+cube_randomization:
+  x_range: [-0.15, 0.15]
+  y_range: [-0.15, 0.15]
+  z: 0.025
+phases:
+  pregrasp_steps: 150
+  lower_steps: 100
+  grasp_steps: 60
+  lift_steps: 120

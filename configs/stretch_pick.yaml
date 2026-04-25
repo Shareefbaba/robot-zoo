@@ -1,0 +1,21 @@
+robot: stretch
+task: pick_cube
+output_dir: data/demos/stretch_pick_cube
+num_demos: 100
+success_threshold: 0.40
+fixed_base: false
+navigation:
+  controller: p_controller
+  kp: 1.5
+  tolerance: 0.001
+  max_steps: 300
+  spawn_offset: -1.0
+cube_randomization:
+  x_range: [-0.1, 0.1]
+  y_range: [-0.1, 0.1]
+  z: 0.03
+phases:
+  pregrasp_steps: 150
+  lower_steps: 80
+  grasp_steps: 60
+  lift_steps: 100

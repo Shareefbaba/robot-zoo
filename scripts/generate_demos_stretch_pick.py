@@ -53,7 +53,9 @@ def record_current_state(action_tensor):
 print(f"Collecting {args_cli.num_demos} Stretch pick-cube demonstrations.")
 successful_eps = 0
 
-for ep in range(args_cli.num_demos):
+ep = 0
+while recorder._ep_idx < args_cli.num_demos:
+    ep += 1
     print(f"\n=== Starting Episode {ep:04d} ===")
 
     # 1. DOMAIN RANDOMIZATION
@@ -149,7 +151,7 @@ for ep in range(args_cli.num_demos):
         print(f"  [Failed] Z-height: {final_z:.3f}m")
 
 # 5. SAVE METADATA
-success_rate = successful_eps / args_cli.num_demos
+success_rate = successful_eps / max(ep, 1)
 recorder.save_metadata(total_episodes=successful_eps, success_rate=success_rate)
 
 simulation_app.close()

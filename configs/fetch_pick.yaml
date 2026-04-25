@@ -1,0 +1,21 @@
+robot: fetch
+task: pick_cube
+output_dir: data/demos/fetch_pick_cube
+num_demos: 100
+success_threshold: 0.08
+fixed_base: false
+navigation:
+  controller: p_controller
+  kp: 1.5
+  tolerance: 0.001
+  max_steps: 300
+  spawn_offset: -1.0
+cube_randomization:
+  x_range: [-0.05, 0.05]
+  y_range: [-0.05, 0.05]
+  z: 0.025
+phases:
+  pregrasp_steps: 100
+  lower_steps: 120
+  grasp_steps: 60
+  lift_steps: 150

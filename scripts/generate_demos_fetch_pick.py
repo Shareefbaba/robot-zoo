@@ -62,7 +62,9 @@ print(f"Collecting {args_cli.num_demos} Fetch pick-cube demonstrations.")
 successful_eps = 0
 dt = sim.get_physics_dt()
 
-for ep in range(args_cli.num_demos):
+ep = 0
+while recorder._ep_idx < args_cli.num_demos:
+    ep += 1
     print(f"\n=== Episode {ep:04d} ===")
 
     # 1. DOMAIN RANDOMIZATION
