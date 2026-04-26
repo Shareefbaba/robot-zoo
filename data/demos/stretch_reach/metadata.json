@@ -1,0 +1,15 @@
+{
+  "task": "reach",
+  "robot": "stretch",
+  "total_episodes": 1000,
+  "success_rate": 1.0,
+  "observation_keys": [
+    "observation.state",
+    "observation.cube_pos"
+  ],
+  "action_dim": 8,
+  "state_dim": 18,
+  "created_at": "2026-04-26T03:55:20.673914",
+  "isaac_lab_version": "0.54.3",
+  "isaac_sim_version": "5.1.0"
+}
