@@ -1,0 +1,15 @@
+{
+  "task": "pick_cube",
+  "robot": "fetch",
+  "total_episodes": 990,
+  "success_rate": 0.99,
+  "observation_keys": [
+    "observation.state",
+    "observation.cube_pos"
+  ],
+  "action_dim": 8,
+  "state_dim": 18,
+  "created_at": "2026-04-26T22:44:28.837798",
+  "isaac_lab_version": "0.54.3",
+  "isaac_sim_version": "5.1.0"
+}
