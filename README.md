@@ -128,6 +128,7 @@ robot_zoo/
 ├── notebooks/      # 12 visualization notebooks (one per task-robot pair)
 ├── scripts/        # Demo generation scripts
 └── tests/          # Unit tests for the BaseRobot interface
+
 ## Design notes
 
 **A common interface for all three robots.** All robots inherit from a `BaseRobot` abstract class with five methods: `get_num_joints`, `get_base_target`, `get_pregrasp_joint_target`, `get_grasp_joint_target`, and `get_lift_joint_target`. Generation scripts share their high-level structure regardless of which robot they're driving — adding a fourth robot to the codebase is roughly 50 lines.
